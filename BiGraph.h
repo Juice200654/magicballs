@@ -25,7 +25,7 @@ BiGraph* creatBG(ListGraph* LG){
     int num = LG->vertex;
     BG-> NodeNum = num;
     BG->adj = (int**)malloc((num+1)*sizeof(int*));
-    BG->adjSize = (int*)calloc(num,sizeof(int));
+    BG->adjSize = (int*)calloc(num+1,sizeof(int));
     BG->adj[0] = NULL;
     for (int u = 1; u <= num; u++){
         BG->adj[u] = (int*)malloc(num*sizeof(int));     
